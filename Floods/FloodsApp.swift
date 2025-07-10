@@ -13,7 +13,7 @@ import SwiftUI
 struct FloodsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FloodsView()
         }
     }
 }
