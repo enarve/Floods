@@ -52,7 +52,7 @@ struct FloodsView: View {
                 }
                 URLSession.shared.dataTask(with: url) { data, response, error in
                     if let data {
-                        if let json = try? JSONSerialization.jsonObject(with: data) {
+                        if let json = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]] {
                             print(json)
                         } else {
                             print("Json error")

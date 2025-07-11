@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		AF290FA42E21C26300D86FBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF290F672E2025B600D86FBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF290F6E2E2025B600D86FBD;
+			remoteInfo = Floods;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		AF290F6F2E2025B600D86FBD /* Floods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Floods.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF290FA02E21C26300D86FBD /* FloodsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FloodsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = Floods;
 			sourceTree = "<group>";
 		};
+		AF290FA12E21C26300D86FBD /* FloodsTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FloodsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF290F6C2E2025B600D86FBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF290F9D2E21C26300D86FBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				AF290F712E2025B600D86FBD /* Floods */,
+				AF290FA12E21C26300D86FBD /* FloodsTests */,
 				AF290F702E2025B600D86FBD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				AF290F6F2E2025B600D86FBD /* Floods.app */,
+				AF290FA02E21C26300D86FBD /* FloodsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = AF290F6F2E2025B600D86FBD /* Floods.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AF290F9F2E21C26300D86FBD /* FloodsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF290FA62E21C26300D86FBD /* Build configuration list for PBXNativeTarget "FloodsTests" */;
+			buildPhases = (
+				AF290F9C2E21C26300D86FBD /* Sources */,
+				AF290F9D2E21C26300D86FBD /* Frameworks */,
+				AF290F9E2E21C26300D86FBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF290FA52E21C26300D86FBD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				AF290FA12E21C26300D86FBD /* FloodsTests */,
+			);
+			name = FloodsTests;
+			packageProductDependencies = (
+			);
+			productName = FloodsTests;
+			productReference = AF290FA02E21C26300D86FBD /* FloodsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					AF290F6E2E2025B600D86FBD = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					AF290F9F2E21C26300D86FBD = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = AF290F6E2E2025B600D86FBD;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				AF290F6E2E2025B600D86FBD /* Floods */,
+				AF290F9F2E21C26300D86FBD /* FloodsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AF290F6D2E2025B600D86FBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF290F9E2E21C26300D86FBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF290F9C2E21C26300D86FBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF290FA52E21C26300D86FBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF290F6E2E2025B600D86FBD /* Floods */;
+			targetProxy = AF290FA42E21C26300D86FBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF290F782E2025B800D86FBD /* Debug */ = {
@@ -304,6 +379,44 @@
 			};
 			name = Release;
 		};
+		AF290FA72E21C26300D86FBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PJ6H7TZH8L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nv.enarve.FloodsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Floods.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Floods";
+			};
+			name = Debug;
+		};
+		AF290FA82E21C26300D86FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PJ6H7TZH8L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nv.enarve.FloodsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Floods.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Floods";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -321,6 +434,15 @@
 			buildConfigurations = (
 				AF290F7B2E2025B800D86FBD /* Debug */,
 				AF290F7C2E2025B800D86FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF290FA62E21C26300D86FBD /* Build configuration list for PBXNativeTarget "FloodsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF290FA72E21C26300D86FBD /* Debug */,
+				AF290FA82E21C26300D86FBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
