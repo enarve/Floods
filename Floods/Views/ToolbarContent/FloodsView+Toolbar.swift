@@ -8,7 +8,7 @@ extension FloodsView {
             if editMode == .active {
                 SelectButton(mode: $selectMode) {
                     if selectMode.isActive {
-                        selection = Set(floods.map { $0.code })
+                        selection = Set(floods.map { $0.id })
                     } else {
                         selection = []
                     }

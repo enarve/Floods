@@ -9,14 +9,15 @@
 
 import Foundation
 
-struct Flood {
-    let height: Double
-    let place: String
-    let time: Date
-    let code: String
-    let detail: URL
-}
-
-extension Flood: Identifiable {
-    var id: String { code }
+struct Flood: Identifiable {
+    let id: String // nwis_id
+    let height: Double // gage_height
+    let place: String // site_name
+    let description: String // description
+    let latitude: Double
+    let longitude: Double
+    
+    var detail: URL? {
+        return URL(string: "https://rtfi.wim.usgs.gov/referencepoints/nwis/\(id)")
+    }
 }

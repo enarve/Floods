@@ -10,16 +10,12 @@
 import SwiftUI
 
 let staticData: [Flood] = [
-    Flood(height: 0.8,
+    Flood(id: "0", height: 0.8,
           place: "Shakey Acres",
-          time: Date(timeIntervalSinceNow: -1000),
-          code: "nc73649170",
-          detail: URL(string: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/nc73649170.geojson")!),
-    Flood(height: 2.2,
+          description: "", latitude: 0, longitude: 0),
+    Flood(id: "1", height: 2.2,
           place: "Rumble Alley",
-          time: Date(timeIntervalSinceNow: -5000),
-          code: "hv72783692",
-          detail: URL(string: "https://earthquake.usgs.gov/earthquakes/feed/v1.0/detail/hv72783692")!)
+          description: "", latitude: 0, longitude: 0)
     ]
 
 struct FloodsView: View {
@@ -48,6 +44,24 @@ struct FloodsView: View {
             .refreshable {
                 fetchFloods()
             }
+            .onAppear {
+                let urlString = "https://rtfi.wim.usgs.gov/referencepoints"
+                guard let url = URL(string: urlString) else {
+                    print("Url error")
+                    return
+                }
+                URLSession.shared.dataTask(with: url) { data, response, error in
+                    if let data {
+                        if let json = try? JSONSerialization.jsonObject(with: data) {
+                            print(json)
+                        } else {
+                            print("Json error")
+                        }
+                    } else {
+                        print("Request error")
+                    }
+                }.resume()
+            }
         }
     }
 }
@@ -63,10 +77,10 @@ extension FloodsView {
     func deleteFloods(at offsets: IndexSet) {
         floods.remove(atOffsets: offsets)
     }
-    func deleteFloods(for codes: Set<String>) {
+    func deleteFloods(for ids: Set<String>) {
         var offsetsToDelete: IndexSet = []
         for (index, element) in floods.enumerated() {
-            if codes.contains(element.code) {
+            if ids.contains(element.id) {
                 offsetsToDelete.insert(index)
             }
         }
