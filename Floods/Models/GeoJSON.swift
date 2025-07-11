@@ -26,8 +26,11 @@ struct GeoJSON: Decodable {
         while !featuresContainer.isAtEnd {
             let propertiesContainer = try featuresContainer.nestedContainer(keyedBy: FeatureCodingKeys.self)
             
-            if let properties = try? propertiesContainer.decode(Flood.self, forKey: .properties) {
+            do {
+                let properties = try propertiesContainer.decode(Flood.self, forKey: .properties)
                 floods.append(properties)
+            } catch {
+                print(error.localizedDescription)
             }
         }
         
