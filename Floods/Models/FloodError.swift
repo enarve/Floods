@@ -11,6 +11,7 @@ import Foundation
 
 enum FloodError: Error {
     case missingData
+    case networkError
 }
 
 extension FloodError: LocalizedError {
@@ -18,6 +19,8 @@ extension FloodError: LocalizedError {
         switch self {
         case .missingData:
             return NSLocalizedString("Found and will discard a flood missing data", comment: "")
+        case .networkError:
+            return NSLocalizedString("Network error", comment: "")
         }
     }
 }
