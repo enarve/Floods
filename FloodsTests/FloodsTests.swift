@@ -28,4 +28,11 @@ struct FloodsTests {
         #expect(decoded.floods.count == 6)
         #expect(decoded.floods[0].id == "01581960")
     }
+    
+    @Test func floodDetailsDecoder() throws {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .millisecondsSince1970
+        let decoded = try decoder.decode(FloodLocation.self, from: testDetail_02207055)
+        #expect(decoded.latitude == 19.2189998626709)
+    }
 }

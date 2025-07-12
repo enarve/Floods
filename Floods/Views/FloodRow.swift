@@ -18,7 +18,7 @@ struct FloodRow: View {
             VStack(alignment: .leading) {
                 Text(flood.place)
                     .font(.title3)
-                Text("\(flood.description)")
+                Text("\(flood.description ?? "")")
                     .foregroundStyle(.secondary)
             }
         }
