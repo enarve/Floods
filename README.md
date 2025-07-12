@@ -1,1 +1,1 @@
-Based on U.S. Geological Survey [flood data](https://waterdata.usgs.gov/blog/api-flood-impact/).
+Based on Apple's [Earthquakes](https://developer.apple.com/tutorials/app-dev-training/getting-started-with-earthquakes) tutorial project and U.S. Geological Survey [flood data](https://waterdata.usgs.gov/blog/api-flood-impact/).
